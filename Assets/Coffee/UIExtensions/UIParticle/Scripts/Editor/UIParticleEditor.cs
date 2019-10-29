@@ -599,7 +599,7 @@ namespace Coffee.UIExtensions
 				{
 					EditorGUI.BeginChangeCheck ();
 					//float radius = Handles.DoSimpleEdgeHandle (Quaternion.identity, Vector3.zero, shapeModule.radius);
-					float radius = Call<float> (typeof (Handles), "DoSimpleEdgeHandle", Quaternion.identity, Vector3.zero, shapeModule.radius);
+					float radius = Call<float> (typeof (Handles), "DoSimpleEdgeHandle", Quaternion.identity, Vector3.zero, shapeModule.radius, true);
 					if (EditorGUI.EndChangeCheck ())
 					{
 						Undo.RecordObject (ps, "Edge Handle Change");
